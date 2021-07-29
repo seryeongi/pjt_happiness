@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Mazer Admin Dashboard</title>
+    <script src="http://code.jquery.com/jquery-1.7.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.css' %}">
+
+    <link rel="stylesheet" href="{% static 'assets/vendors/iconly/bold.css' %}">
+
+    <link rel="stylesheet" href="{% static 'assets/vendors/perfect-scrollbar/perfect-scrollbar.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/vendors/bootstrap-icons/bootstrap-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/app.css' %}">
+    <link rel="shortcut icon" href="{% static 'assets/images/favicon.svg' %}" type="image/x-icon">
+</head>
+
+<body>
+    <div id="app">
+        <div id="sidebar" class="active">
+            <div class="sidebar-wrapper active">
+
+                    <div class="d-flex justify-content-between">
+
+                        <div class="logo">
+
+                            <a href="index"><img src="{% static 'assets/images/logo/logo.png' %}" alt="Logo" srcset="" ></a>
+
+                        </div>
+
+                        <div class="toggler">
+                            <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
+                        </div>
+                    </div>
+
+                <div class="sidebar-menu">
+                    <ul class="menu">
+
+                        <li class="sidebar-item active ">
+                            <a href="index" class='sidebar-link'>
+                                <i class="bi bi-award-fill"></i>
+                                <span>Main</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-title">Menu</li>
+
+
+
+                        <li class="sidebar-item">
+                            <a href="information" class='sidebar-link'>
+                                <i class="bi bi-info-square"></i>
+                                <span>Information</span>
+                            </a>
+                        </li>
+
+
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-stack"></i>
+                                <span>Theme1</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="info">Info</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="social">Social support</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="health">Health</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="gdp">Gdp</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="etc">Etc</a>
+                                </li>
+                                </ul>
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-stack"></i>
+                                <span>Theme2</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="info2">Info</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="covid19">Covid-19</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="militarypower">Military power</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="illiteracyrate">literacy rate</a>
+                                </li>
+                                </ul>
+
+                        <li class="sidebar-title">User</li>
+
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-person-badge-fill"></i>
+                                <span>Authentication</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="authregister">Register</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="authforgotpassword">Forgot Password</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                                                <li class="sidebar-title">Reference</li>
+                        <li class="sidebar-item">
+                            <a href="https://themewagon.com/" target='_blank' class='sidebar-link'>
+                                <i class="bi bi-display"></i>
+                                <span>Bootstrap</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-item">
+                            <a href="https://www.kaggle.com/mathurinache/world-happiness-report-20152021" target='_blank' class='sidebar-link'>
+                                <i class="bi bi-file-earmark-arrow-down"></i>
+                                <span>Dataset</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-item">
+                            <a href="https://worldhappiness.report/" target='_blank' class='sidebar-link'>
+                                <i class="bi bi-journal"></i>
+                                <span>HappinessReport</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+                <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
+            </div>
+        </div>
+        <div id="main">
+            <header class="mb-3">
+                <a href="#" class="burger-btn d-block d-xl-none">
+                    <i class="bi bi-justify fs-3"></i>
+                </a>
+            </header>
+
+            <div class="page-heading">
+
+            </div>
+            <div class="page-content">
+                <section class="row">
+                    <div class="col-12 col-lg-9">
+                        <div class="row">
+                            <div class="col-6 col-lg-3 col-md-6">
+                                <div class="card">
+                                    <div class="card-body px-3 py-4-5">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="stats-icon purple">
+                                                    <i class="iconly-boldShow"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <h6 class="font-extrabold mb-2">Github</h6>
+                                                <span> </span>
+                                                <h6 class="text-muted font-semibold"><a href="https://github.com/rcm2000/BigdataService_team1" target='_blank'>보러가기</a></h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-lg-3 col-md-6">
+                                <div class="card">
+                                    <div class="card-body px-3 py-4-5">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="stats-icon blue">
+                                                    <i class="iconly-boldFilter"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <h6 class="font-extrabold mb-2">기획안</h6>
+                                                <h6 class="text-muted font-semibold"><a href="https://drive.google.com/drive/folders/10cyymQ_EHcWWUWyYXzZllr3qhctvARhY" target='_blank'>보러가기</a></h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-lg-3 col-md-6">
+                                <div class="card">
+                                    <div class="card-body px-3 py-4-5">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="stats-icon green">
+                                                    <i class="iconly-boldProfile"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <h6 class="font-extrabold mb-2">발표자료</h6>
+                                                <h6 class="text-muted font-semibold"><a href="https://drive.google.com/drive/folders/1mZ9B5jfUiJEeuL1V7j5WPxCW0n86137L" target='_blank'>보러가기</a></h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-lg-3 col-md-6">
+                                <div class="card">
+                                    <div class="card-body px-3 py-4-5">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="stats-icon red">
+                                                    <i class="iconly-boldBookmark"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <h6 class="font-extrabold mb-2">최종보고서</h6>
+                                                <h6 class="text-muted font-semibold"><a href="https://drive.google.com/drive/folders/1e2by8i-eeAXt0H8mrq9TnwwcedJKQdyA" target='_blank'>보러가기</a></h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h4>2021 행복 지수</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <div id="chart-profile-visit"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-xl-4">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h4>한·중·일 행복 지수</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="d-flex align-items-center">
+                                                    <svg class="bi text-primary" width="32" height="32" fill="blue"
+                                                        style="width:10px">
+                                                        <use
+                                                            xlink:href="{% static 'assets/vendors/bootstrap-icons/bootstrap-icons.svg#circle-fill' %}" />
+                                                    </svg>
+                                                    <h5 class="mb-0 ms-3">Korea</h5>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <h5 class="mb-0">5.845</h5>
+                                            </div>
+                                            <div class="col-12">
+                                                <div id="chart-europe"></div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="d-flex align-items-center">
+                                                    <svg class="bi text-success" width="32" height="32" fill="blue"
+                                                        style="width:10px">
+                                                        <use
+                                                            xlink:href="{% static 'assets/vendors/bootstrap-icons/bootstrap-icons.svg#circle-fill' %}" />
+                                                    </svg>
+                                                    <h5 class="mb-0 ms-3">China</h5>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <h5 class="mb-0">5.339</h5>
+                                            </div>
+                                            <div class="col-12">
+                                                <div id="chart-america"></div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="d-flex align-items-center">
+                                                    <svg class="bi text-danger" width="32" height="32" fill="blue"
+                                                        style="width:10px">
+                                                        <use
+                                                            xlink:href="{% static 'assets/vendors/bootstrap-icons/bootstrap-icons.svg#circle-fill' %}" />
+                                                    </svg>
+                                                    <h5 class="mb-0 ms-3">Japan</h5>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <h5 class="mb-0">5.94</h5>
+                                            </div>
+                                            <div class="col-12">
+                                                <div id="chart-indonesia"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-xl-8">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h4> 2015-2021 세계 행복 지수 지도</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        {% autoescape off %}
+                                        {{ plot_div }}
+                                        {% endautoescape %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-3">
+                        <div class="card">
+                            <div class="card-body py-4 px-5">
+                                <div class="d-flex align-items-center">
+
+                                    <div class="ms-3 name">
+                                    <form method="POST">
+                                        <h6>로그인</h6>
+                                        {% csrf_token %}
+                                        {% if login_session %}
+                                        <div class="avatar avatar-lg">
+                                        <img src="{% static 'assets/images/faces/1.jpg' %}" alt="Face 1">
+                                        </div>
+                                        {{ msg }}
+                                        <div align="right"><a href="logout"><input type="submit" value="logout"></a></div>
+                                        {% else %}
+                                        <input class="form-control" name="user_id" placeholder="id" required />
+                                        <input class="form-control" name="user_pw" placeholder="password" type="password" required />
+                                        <button class="btn btn-primary btn-block " type="submit" value="login">로그인</button>
+                                        <br>{{ msg }}
+                                        {% endif %}
+
+                                    </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>팀 구성원</h4>
+                            </div>
+                            <div class="card-content pb-4">
+                                <div class="recent-message d-flex px-4 py-3">
+                                    <div class="avatar avatar-lg">
+                                        <img src="{% static 'assets/images/faces/seryeong.jpg' %}">
+                                    </div>
+                                    <div class="name ms-4">
+                                        <h5 class="mb-1">이세령</h5>
+                                        <a class="text-muted mb-0" href="https://github.com/seryeongi" target='_blank'>@seryeongi</a>
+                                    </div>
+                                </div>
+                                <div class="recent-message d-flex px-4 py-3">
+                                    <div class="avatar avatar-lg">
+                                        <img src="{% static 'assets/images/faces/HyunJung2.png' %}">
+                                    </div>
+                                    <div class="name ms-4">
+                                        <h5 class="mb-1">주현정</h5>
+                                        <a class="text-muted mb-0" href="https://github.com/HyunJung-Eliana" target='_blank'>@HyunJung-Eliana</a>
+                                    </div>
+                                </div>
+                                <div class="recent-message d-flex px-4 py-3">
+                                    <div class="avatar avatar-lg">
+                                        <img src="{% static 'assets/images/faces/cheongmyeong2.jpg' %}">
+                                    </div>
+                                    <div class="name ms-4">
+                                        <h5 class="mb-1">노청명</h5>
+                                        <a class="text-muted mb-0" href="https://github.com/rcm2000" target='_blank'>@rcm2000</a>
+                                    </div>
+
+                                </div>
+                                <div class="recent-message d-flex px-4 py-3">
+                                    <div class="avatar avatar-lg">
+                                        <img src="{% static 'assets/images/faces/Geonnyeong.png' %}">
+                                    </div>
+                                    <div class="name ms-4">
+                                        <h5 class="mb-1">오건녕</h5>
+                                        <a class="text-muted mb-0" href="https://github.com/Geon-nyeong" target='_blank'>@Geon-nyeong</a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>행복 키워드 클라우드</h4>
+                            </div>
+
+                            <img class="card-img-bottom img-fluid" src="{% static 'happywc.jpg' %}"
+                                        alt="Card image cap" style="max-width: 80%; max-height: 90%; margin: auto">
+                            <div>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <footer>
+                <div class="footer clearfix mb-0 text-muted">
+                    <div class="float-start">
+                        <p>2021 &copy; Mazer</p>
+                    </div>
+                    <div class="float-end">
+                        <p>Crafted with <span class="text-danger"><i class="bi bi-heart"></i></span> by <a
+                                href="http://ahmadsaugi.com">A. Saugi</a></p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="{% static 'assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+
+    <script src="{% static 'assets/vendors/apexcharts/apexcharts.js' %}"></script>
+    <script src="{% static 'assets/js/pages/dashboard.js' %}"></script>
+
+    <script src="{% static 'assets/js/main.js' %}"></script>
+</body>
+
+</html>

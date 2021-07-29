@@ -1,0 +1,11 @@
+country,year,region,score,literacy_1,literacy
+Niger,2015,Africa,3.845,0.15,15
+Guinea,2015,Africa,3.656,0.25,25
+Burkina Faso,2015,Africa,3.587,0.29,29
+Benin,2015,Africa,3.34,0.29,29
+Mali,2015,Africa,3.995,0.31,31
+Afghanistan,2015,Asia,3.575,0.32,32
+Central African Republic,2015,Africa,3.678,0.37,37
+Chad,2015,Africa,3.667,0.38,38
+Ethiopia,2015,Africa,4.512,0.39,39
+Liberia,2015,Africa,4.571,0.43,43

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% load static %}
+<head>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/item-series.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="http://code.jquery.com/jquery-1.7.js"></script>
+    <script>
+        function display2() {
+            Highcharts.chart('container2', {
+
+                chart: {
+                    type: 'item'
+                },
+
+                title: {
+                    text: '실시간 Covid-19 차트'
+                },
+
+                subtitle: {
+                    text: ''
+                },
+
+                legend: {
+                    labelFormat: '{name} <span style="opacity: 0.4">{y}</span>'
+                },
+
+                series: [{
+                    name: 'Representatives',
+                    keys: ['name', 'y', 'color', 'label'],
+                    data: [['치료중 환자 수', 2, '#EB001F', '치료중 환자 수'], ['격리해제 수', 17, '#64A12D', '격리해제 수'], ['확진자 수',
+                        19, '#000000', '확진자 수'], ['검사진행 수', 27, '#008AC5', '검사진행 수'], ['단위 : 1만명', , '#FFFFFF', '']],
+                    dataLabels: {
+                        enabled: true,
+                        format: '{point.label}'
+                    },
+
+                    // Circular options
+                    center: ['50%', '88%'],
+                    size: '100%',
+                    startAngle: -100,
+                    endAngle: 100
+                }]
+            });
+        }
+      function getdata2(){
+        $.ajax({
+                url:'highchart',
+                datatype:'JSON',
+                success:function(){
+                    display2();
+                }
+        })
+      };
+
+      $(document).ready(function(){
+        getdata2();
+      });
+
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Mazer Admin Dashboard</title>
+    <script src="http://code.jquery.com/jquery-1.7.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.css' %}">
+
+    <link rel="stylesheet" href="{% static 'assets/vendors/iconly/bold.css' %}">
+
+    <link rel="stylesheet" href="{% static 'assets/vendors/perfect-scrollbar/perfect-scrollbar.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/vendors/bootstrap-icons/bootstrap-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/app.css' %}">
+    <link rel="shortcut icon" href="{% static 'assets/images/favicon.svg' %}" type="image/x-icon">
+</head>
+
+<body>
+    <div id="app">
+        <div id="sidebar" class="active">
+            <div class="sidebar-wrapper active">
+
+                    <div class="d-flex justify-content-between">
+
+                        <div class="logo">
+
+                            <a href="index"><img src="{% static 'assets/images/logo/logo.png' %}" alt="Logo" srcset="" ></a>
+
+                        </div>
+
+                        <div class="toggler">
+                            <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
+                        </div>
+                    </div>
+
+                <div class="sidebar-menu">
+                    <ul class="menu">
+
+                        <li class="sidebar-item ">
+                            <a href="index" class='sidebar-link'>
+                                <i class="bi bi-award-fill"></i>
+                                <span>Main</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-title">Menu</li>
+
+
+
+                        <li class="sidebar-item">
+                            <a href="information" class='sidebar-link'>
+                                <i class="bi bi-info-square"></i>
+                                <span>Information</span>
+                            </a>
+                        </li>
+
+
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-stack"></i>
+                                <span>Theme1</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="info">Info</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="social">Social support</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="health">Health</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="gdp">Gdp</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="etc">Etc</a>
+                                </li>
+                                </ul>
+                        <li class="sidebar-item  has-sub active ">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-stack"></i>
+                                <span>Theme2</span>
+                            </a>
+                            <ul class="submenu active ">
+                                <li class="submenu-item active ">
+                                    <a href="info2">Info</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="covid19">Covid-19</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="militarypower">Military power</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="illiteracyrate">literacy rate</a>
+                                </li>
+                                </ul>
+
+                        <li class="sidebar-title">User</li>
+
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-person-badge-fill"></i>
+                                <span>Authentication</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="authregister">Register</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="authforgotpassword">Forgot Password</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                                                <li class="sidebar-title">Reference</li>
+                        <li class="sidebar-item">
+                            <a href="https://themewagon.com/" target='_blank' class='sidebar-link'>
+                                <i class="bi bi-display"></i>
+                                <span>Bootstrap</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-item">
+                            <a href="https://www.kaggle.com/mathurinache/world-happiness-report-20152021" target='_blank' class='sidebar-link'>
+                                <i class="bi bi-file-earmark-arrow-down"></i>
+                                <span>Dataset</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-item">
+                            <a href="https://worldhappiness.report/" target='_blank' class='sidebar-link'>
+                                <i class="bi bi-journal"></i>
+                                <span>HappinessReport</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+                <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
+            </div>
+        </div>
+        <div id="main">
+            <header class="mb-3">
+                <a href="#" class="burger-btn d-block d-xl-none">
+                    <i class="bi bi-justify fs-3"></i>
+                </a>
+            </header>
+<!--==================================================================-->
+            <div class="page-heading">
+                <div class="page-title">
+                    <div class="row">
+                        <div class="col-12 col-md-6 order-md-1 order-last">
+                            <h3>프로젝트 소개</h3>
+                            <p class="text-subtitle text-muted">- 코로나19, 국력, 문맹률</p>
+                        </div>
+                        <div class="col-12 col-md-6 order-md-2 order-first">
+                            <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="index">Main</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">info</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <!-- Basic card section start -->
+                <section id="content-types">
+                    <div class="row">
+                        <div class="col-xl-8 col-md-6 col-sm-12">
+                            <div class="card">
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Covid-19</h4>
+                                        <p class="card-text">
+                                            WHO에 보고된 날짜별 일일 사례 및 사망 데이터
+                                        </p>
+
+                                    </div>
+                                    <img class="img-fluid w-100" src="{% static 'assets/images/samples/who2.png' %}"
+                                        alt="Card image cap">
+                                    <table class="table mb-0 table-sm">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Short field name</th>
+                                                        <th colspan='2'>Description</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="text-bold-500">Date</td>
+                                                        <td colspan='2'>WHO에 보고한 날짜</td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-bold-500">Country</td>
+                                                        <td colspan='2'>Country, territory, area</td>
+
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td class="text-bold-500">New_cases</td>
+                                                        <td colspan='2'>신규 확진 사례. 현재 누적 확진 사례에서 이전 누적 확진 사례를 빼서 계산합니다.</td>
+
+                                                    </tr>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-bold-500">Cumulative_cases</td>
+                                                        <td colspan='2'>현재까지 WHO에 보고된 누적 확인 사례.</td>
+
+                                                    </tr>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-bold-500">New_deaths</td>
+                                                        <td colspan='2'>신규 확진자 사망 수. 현재 누적 사망자 수에서 이전 누적 사망자 수를 빼서 계산합니다.</td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-bold-500">Cumulative_deaths</td>
+                                                        <td colspan='2'>현재까지 WHO에 보고된 누적 사망자 수.</td>
+
+                                                    </tr>
+
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+
+                                </div>
+                                <div class="card-footer d-flex justify-content-between">
+                                    <span> </span>
+                                    <button class="btn btn-light-primary"><a href="https://covid19.who.int/info/" target='_blank'>Read More</a></button>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-xl-4 col-md-6 col-sm-12">
+                            <div class="card">
+                                <div class="card-content">
+                                    <br>
+                                    <img src="{% static 'assets/images/samples/heatmap_covid.png' %}" class="card-img-top img-fluid"
+                                         alt="singleminded">
+                                    <div class="card-body">
+                                        <h5 class="card-title">행복지수와의 상관관계</h5>
+                                        <p class="card-text">
+                                            pwridx(군사력) : 0.42 ; 낮은 상관관계가 있다.<br>
+                                            literacy(문해율) : 0.58 ; 다소 높은 상관관계가 있다.<br>
+                                            cumulative_cases(누적확진사례): 0.079 ; 상관관계가 없다.<br>
+                                            cumulative_deaths(누적 사망자수): 0.048 ; 상관관계가 없다.<br><br>
+                                            * 21년도 행복지수 상위 10개국을 토대로
+
+                                        </p>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="card">
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Covid-19</h5>
+                                        <div id="container2"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-md-6 col-sm-12">
+                            <div class="card">
+                                <div class="card-content">
+                                    <img class="card-img-top img-fluid" src="{% static 'assets/images/samples/mp3.png' %}"
+                                        alt="Card image cap" style="height: 20rem" />
+                                    <div class="card-body">
+                                        <h4 class="card-title">Military power</h4>
+                                        <p class="card-text">
+                                            국력 데이터는 GlobalFirepower(GFP) 단체의 홈페이지에서 크롤링하였으며, 이 단체는 2006년부터 140개의 현대 군사력에 관한 데이터의 고유한 분석 표시를 제공해왔다. 이 GFP 순위는 재래식 수단으로 싸운 각각의 국가의 지상, 해상 및 공중에서의 잠재적인 전쟁 능력을 기반으로 한다.
+
+크롤링한 데이터는 국가별로 가용한 총 활성화된 병력의 순위를 가장 높은 것부터 가장 낮은 것까지 나열한다. <br> 이렇게 GFP는 군사력 및 재정에서부터 병참 능력 및 지리와 같은 50개 이상의 개별 요소로 국가의 PowerIndex('PwrIndx') 점수를 결정한다.
+
+완벽한 PwrIndx 점수는 0.0000이며 현재 GFP 공식의 범위에서 현실적으로 달성할 수 없다. PwrIndx 값이 작을수록 국가의 이론적 전투 능력은 더 강력하다. (핵 능력이 고려되지 않은 기존 수단 기준)
+                                        </p>
+<span> </span>
+                                    <button class="btn btn-light-primary" style="float: right;"><a href="https://www.globalfirepower.com/countries-listing.php" target='_blank'>Read More</a></button><br>
+                                    </div>
+                                    <span>    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <div class="card">
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <h4 class="card-title">literacy rate</h4>
+                                        <p class="card-text">
+                                            문해율은 읽고 쓸 수 있는 특정 연령대의 인구 비율로 정의된다. 일반적으로 일상생활에 관한 짧고 간단한 문장을 이해하는 능력에 따라 측정된다.
+문해율 데이터는 UNESCO 단체에서 조사하는 국제 사회의 교육을 통한 모든 사람을 위한 교육(EFA) 중 원본 데이터에서 가져왔으며,
+데이터는 literacy rate는 100을 만점으로 소수의 결측치는 제외된다.
+                                        </p>
+                                        <button class="btn btn-light-primary" style="float: right;"><a href="https://www.worldatlas.com/articles/the-highest-literacy-rates-in-the-world.html" target='_blank'>Read More</a></button><br>
+                                    </div>
+                                    <img class="card-img-bottom img-fluid" src="{% static 'assets/images/samples/il.png' %}"
+                                        alt="Card image cap" style="height: 20rem; object-fit: cover;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Basic Card types section end -->
+
+
+                <!-- Groups section start -->
+
+            </div>
+<!--==================================================================-->
+            <footer>
+                <div class="footer clearfix mb-0 text-muted">
+                    <div class="float-start">
+                        <p>2021 &copy; Mazer</p>
+                    </div>
+                    <div class="float-end">
+                        <p>Crafted with <span class="text-danger"><i class="bi bi-heart"></i></span> by <a
+                                href="http://ahmadsaugi.com">A. Saugi</a></p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="{% static 'assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+
+    <script src="{% static 'assets/vendors/apexcharts/apexcharts.js' %}"></script>
+    <script src="{% static 'assets/js/pages/dashboard.js' %}"></script>
+
+    <script src="{% static 'assets/js/main.js' %}"></script>
+</body>
+
+</html>

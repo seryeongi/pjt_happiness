@@ -1,0 +1,73 @@
+country,month,monthly_cumulative_cases,monthly_cumulative_deaths
+Australia,Jul-20,8536,85
+Australia,Aug-20,9367,422
+Australia,Sep-20,1393,271
+Australia,Oct-20,519,25
+Australia,Nov-20,311,0
+Australia,Dec-20,488,2
+Australia,Jan-21,425,0
+Australia,Feb-21,159,0
+Australia,Mar-21,331,0
+Australia,Apr-21,483,1
+Australia,May-21,319,0
+Australia,Jun-21,464,0
+Brazil,Jul-20,1208122,32512
+Brazil,Aug-20,1293888,30328
+Brazil,Sep-20,899311,21596
+Brazil,Oct-20,748912,16911
+Brazil,Nov-20,795896,13592
+Brazil,Dec-20,1273279,20120
+Brazil,Jan-21,1554962,29985
+Brazil,Feb-21,1337117,30169
+Brazil,Mar-21,2117985,61031
+Brazil,Apr-21,1947674,84319
+Brazil,May-21,1950311,62872
+Brazil,Jun-21,1976802,53035
+Finland,Jul-20,214,1
+Finland,Aug-20,654,6
+Finland,Sep-20,1815,8
+Finland,Oct-20,6018,15
+Finland,Nov-20,8719,35
+Finland,Dec-20,11229,163
+Finland,Jan-21,9013,115
+Finland,Feb-21,11536,71
+Finland,Mar-21,20438,84
+Finland,Apr-21,9768,87
+Finland,May-21,5819,35
+Finland,Jun-21,3310,24
+South Korea,Jul-20,1506,19
+South Korea,Aug-20,5642,23
+South Korea,Sep-20,3865,89
+South Korea,Oct-20,2699,51
+South Korea,Nov-20,7688,62
+South Korea,Dec-20,26523,374
+South Korea,Jan-21,17476,520
+South Korea,Feb-21,11467,183
+South Korea,Mar-21,13415,128
+South Korea,Apr-21,18919,97
+South Korea,May-21,18339,131
+South Korea,Jun-21,16623,59
+South Africa,Jul-20,337905,5283
+South Africa,Aug-20,142887,6216
+South Africa,Sep-20,47516,2639
+South Africa,Oct-20,51110,2563
+South Africa,Nov-20,64020,2247
+South Africa,Dec-20,251459,6556
+South Africa,Jan-21,410075,15918
+South Africa,Feb-21,62989,5990
+South Africa,Mar-21,34510,2847
+South Africa,Apr-21,32801,1543
+South Africa,May-21,83289,2108
+South Africa,Jun-21,291641,3825
+United States of America,Jul-20,1864090,27135
+United States of America,Aug-20,1508065,30939
+United States of America,Sep-20,1184379,21543
+United States of America,Oct-20,1809126,23900
+United States of America,Nov-20,4382606,38988
+United States of America,Dec-20,6211222,75157
+United States of America,Jan-21,6283671,98293
+United States of America,Feb-21,2496941,69832
+United States of America,Mar-21,1764854,34656
+United States of America,Apr-21,1867033,20988
+United States of America,May-21,1003348,19429
+United States of America,Jun-21,388625,10493

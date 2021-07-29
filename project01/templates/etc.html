@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Mazer Admin Dashboard</title>
+    <script src="http://code.jquery.com/jquery-1.7.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.css' %}">
+
+    <link rel="stylesheet" href="{% static 'assets/vendors/iconly/bold.css' %}">
+
+    <link rel="stylesheet" href="{% static 'assets/vendors/perfect-scrollbar/perfect-scrollbar.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/vendors/bootstrap-icons/bootstrap-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/app.css' %}">
+    <link rel="shortcut icon" href="{% static 'assets/images/favicon.svg' %}" type="image/x-icon">
+</head>
+
+<body>
+    <div id="app">
+        <div id="sidebar" class="active">
+            <div class="sidebar-wrapper active">
+
+                    <div class="d-flex justify-content-between">
+
+                        <div class="logo">
+
+                            <a href="index"><img src="{% static 'assets/images/logo/logo.png' %}" alt="Logo" srcset="" ></a>
+
+                        </div>
+
+                        <div class="toggler">
+                            <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
+                        </div>
+                    </div>
+
+                <div class="sidebar-menu">
+                    <ul class="menu">
+
+                        <li class="sidebar-item ">
+                            <a href="index" class='sidebar-link'>
+                                <i class="bi bi-award-fill"></i>
+                                <span>Main</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-title">Menu</li>
+
+
+
+                        <li class="sidebar-item">
+                            <a href="information" class='sidebar-link'>
+                                <i class="bi bi-info-square"></i>
+                                <span>Information</span>
+                            </a>
+                        </li>
+
+
+                        <li class="sidebar-item  has-sub active ">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-stack"></i>
+                                <span>Theme1</span>
+                            </a>
+                            <ul class="submenu active ">
+                                <li class="submenu-item ">
+                                    <a href="info">Info</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="social">Social support</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="health">Health</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="gdp">Gdp</a>
+                                </li>
+                                <li class="submenu-item active ">
+                                    <a href="etc">Etc</a>
+                                </li>
+                                </ul>
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-stack"></i>
+                                <span>Theme2</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="info2">Info</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="covid19">Covid-19</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="militarypower">Military power</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="illiteracyrate">literacy rate</a>
+                                </li>
+                                </ul>
+
+                        <li class="sidebar-title">User</li>
+
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-person-badge-fill"></i>
+                                <span>Authentication</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="authregister">Register</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="authforgotpassword">Forgot Password</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                                                <li class="sidebar-title">Reference</li>
+                        <li class="sidebar-item">
+                            <a href="https://themewagon.com/" target='_blank' class='sidebar-link'>
+                                <i class="bi bi-display"></i>
+                                <span>Bootstrap</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-item">
+                            <a href="https://www.kaggle.com/mathurinache/world-happiness-report-20152021" target='_blank' class='sidebar-link'>
+                                <i class="bi bi-file-earmark-arrow-down"></i>
+                                <span>Dataset</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-item">
+                            <a href="https://worldhappiness.report/" target='_blank' class='sidebar-link'>
+                                <i class="bi bi-journal"></i>
+                                <span>HappinessReport</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+                <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
+            </div>
+        </div>
+        <div id="main">
+            <header class="mb-3">
+                <a href="#" class="burger-btn d-block d-xl-none">
+                    <i class="bi bi-justify fs-3"></i>
+                </a>
+            </header>
+
+            <div class="page-heading">
+                    <div class="page-title">
+                        <div class="row">
+                            <div class="col-12 col-md-6 order-md-1 order-last">
+                                <h3>Etc</h3>
+                                <p class="text-subtitle text-muted">freedom, trust, generosity</p>
+                            </div>
+                            <div class="col-12 col-md-6 order-md-2 order-first">
+                                <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="info">Theme</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">Etc
+                                        </li>
+                                    </ol>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    <section class="section">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">데이터 시각화</h4>
+                            </div>
+                            <div class="card-body">
+                                <img src="{% static 'assets/images/samples/etc2.png' %}" class="card-img-top img-fluid"
+                                         alt="singleminded"  >
+                               <h5> <br>
+Etc는 Freedom, Trust, Generosity 이렇게 세 가지 변수로 구성되어있다. 각 변수들이 행복 지수와 상관관계가 낮기 때문에 Etc로 분류했다. Freedom은 "당신은 당신의 삶을 스스로 선택할 수 있는 자유가 보장되어 있습니까"라는 질문에 네(1), 아니오(0)으로 답변한 것이다.
+Trust는 "정부 부패가 만연해 있습니까?"라는 질문과 "기업 부패가 만연해 있습니까?"라는 질문에 네(1), 아니오(0)으로 답변한 것이다.
+Generosity는 "당신은 지난 달에 자선을 목적으로 기부한 적이 있습니까?"라는 질문에 네(1), 아니오(0)으로 답변한 것이다. 이 변수들은 년도별로 단위가 달라 이하 그래프들은 표준화된 데이터를 기반으로 작성했다.
+
+</h5><br>
+                                <h4>Etc heatmap</h4>
+                                <div style="text-align : center;"><img src="{% static 'assets/images/samples/heatmap_etc.png' %}" align="center"></div>
+                                <i class="bi bi-chat-dots-fill"></i><h7> freedom, trust, generosity와 행복지수 간의 상관관계를 나타내는 히트맵이다. 행복지수와 freedom의 상관계수는 0.57이고 행복지수와 trust의 상관계수는 0.41이고 행복지수와 generosity의 상관계수는 0.11이다. 특히 generosity는 freedom, trust에 비해 낮은 상관관계를 보인다.<br>
+
+
+</h7>
+                                {% autoescape off %}
+                                <br><table class="table" style="table-layout: fixed">
+                                <thead>
+                                                    <tr>
+                                                        <th><i class="bi bi-bar-chart-fill"></i> 연도,대륙별 자율성 vs 행복지수</th>
+                                                    </tr>
+                                                </thead>
+                                </table>
+                                {{ plot_div1 }}
+                                <i class="bi bi-chat-dots-fill"></i><h7> 년도 별로 Freedom에 대한 행복 지수의 상관관계를 scatter plot을 통하여 나타내었다. 국가별 면적을 웹 스크롤링을 통하여 column에 추가하였고, 이를 plot 원소의 크기로 반영하였다. Freedom은 위의 히트맵에서도 확인할 수 있듯이 행복지수와 어느 정도 상관관계를 보여, 우상향 그래프를 나타내는 것을 확인할 수 있다. 또한 아시아대륙 내에서 Freedom이 중국,일본보다 낮으며, 거의 최하위권임을 확인할 수 있다.<br></h7>
+                                <br><table class="table" style="table-layout: fixed">
+                                <thead>
+                                                    <tr>
+                                                        <th><i class="bi bi-bar-chart-fill"></i> 연도,대륙별 부패지각 vs 행복지수</th>
+                                                    </tr>
+                                                </thead>
+                                </table>
+                                {{ plot_div2 }}
+                                <i class="bi bi-chat-dots-fill"></i><h7> 년도 별로 Trust에 대한 행복 지수의 상관관계를 scatter plot을 통하여 나타내었다. Trust는 규칙성 없이 그래프 내에 분포되어 있음을 확인할 수 있으며, 특히 오세아니아의 국가들이 Trust가 높은 것을 확인할 수 있다.<br></h7>
+                                <br><table class="table" style="table-layout: fixed">
+                                <thead>
+                                                    <tr>
+                                                        <th><i class="bi bi-bar-chart-fill"></i> 연도,대륙별 관대함 vs 행복지수</th>
+                                                    </tr>
+                                                </thead>
+                                </table>
+                                {{ plot_div3 }}
+                                <i class="bi bi-chat-dots-fill"></i><h7> 년도 별로 Generosity에 대한 행복 지수의 상관관계를 scatter plot을 통하여 나타내었다. Generosity 또한 규칙성 없이 그래프 내에 분포되어 있음을 확인할 수 있으며, 흥미로운 것은 기부의 빈도를 나타내는 위 그래프에서 상대적으로 GDP가 낮은 아프리카의 국가들보다 유럽 대다수의 국가들이 Generosity가 낮거나 비슷하다는 점이다.<br> </h7>
+                                {% endautoescape %}
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+            <footer>
+                <div class="footer clearfix mb-0 text-muted">
+                    <div class="float-start">
+                        <p>2021 &copy; Mazer</p>
+                    </div>
+                    <div class="float-end">
+                        <p>Crafted with <span class="text-danger"><i class="bi bi-heart"></i></span> by <a
+                                href="http://ahmadsaugi.com">A. Saugi</a></p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="{% static 'assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+
+    <script src="{% static 'assets/vendors/apexcharts/apexcharts.js' %}"></script>
+    <script src="{% static 'assets/js/pages/dashboard.js' %}"></script>
+
+    <script src="{% static 'assets/js/main.js' %}"></script>
+</body>
+
+</html>

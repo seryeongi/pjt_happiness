@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Mazer Admin Dashboard</title>
+    <script src="http://code.jquery.com/jquery-1.7.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.css' %}">
+
+    <link rel="stylesheet" href="{% static 'assets/vendors/iconly/bold.css' %}">
+
+    <link rel="stylesheet" href="{% static 'assets/vendors/perfect-scrollbar/perfect-scrollbar.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/vendors/bootstrap-icons/bootstrap-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/app.css' %}">
+    <link rel="shortcut icon" href="{% static 'assets/images/favicon.svg' %}" type="image/x-icon">
+</head>
+
+<body>
+    <div id="app">
+        <div id="sidebar" class="active">
+            <div class="sidebar-wrapper active">
+
+                    <div class="d-flex justify-content-between">
+
+                        <div class="logo">
+
+                            <a href="index"><img src="{% static 'assets/images/logo/logo.png' %}" alt="Logo" srcset="" ></a>
+
+                        </div>
+
+                        <div class="toggler">
+                            <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
+                        </div>
+                    </div>
+
+                <div class="sidebar-menu">
+                    <ul class="menu">
+
+                        <li class="sidebar-item ">
+                            <a href="index" class='sidebar-link'>
+                                <i class="bi bi-award-fill"></i>
+                                <span>Main</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-title">Menu</li>
+
+
+
+                        <li class="sidebar-item">
+                            <a href="information" class='sidebar-link'>
+                                <i class="bi bi-info-square"></i>
+                                <span>Information</span>
+                            </a>
+                        </li>
+
+
+                        <li class="sidebar-item  has-sub active ">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-stack"></i>
+                                <span>Theme1</span>
+                            </a>
+                            <ul class="submenu active ">
+                                <li class="submenu-item ">
+                                    <a href="info">Info</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="social">Social support</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="health">Health</a>
+                                </li>
+                                <li class="submenu-item active ">
+                                    <a href="gdp">Gdp</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="etc">Etc</a>
+                                </li>
+                                </ul>
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-stack"></i>
+                                <span>Theme2</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="info2">Info</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="covid19">Covid-19</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="militarypower">Military power</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="illiteracyrate">literacy rate</a>
+                                </li>
+                                </ul>
+
+                        <li class="sidebar-title">User</li>
+
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-person-badge-fill"></i>
+                                <span>Authentication</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="authregister">Register</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="authforgotpassword">Forgot Password</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                                                <li class="sidebar-title">Reference</li>
+                        <li class="sidebar-item">
+                            <a href="https://themewagon.com/" target='_blank' class='sidebar-link'>
+                                <i class="bi bi-display"></i>
+                                <span>Bootstrap</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-item">
+                            <a href="https://www.kaggle.com/mathurinache/world-happiness-report-20152021" target='_blank' class='sidebar-link'>
+                                <i class="bi bi-file-earmark-arrow-down"></i>
+                                <span>Dataset</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-item">
+                            <a href="https://worldhappiness.report/" target='_blank' class='sidebar-link'>
+                                <i class="bi bi-journal"></i>
+                                <span>HappinessReport</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+                <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
+            </div>
+        </div>
+        <div id="main">
+            <header class="mb-3">
+                <a href="#" class="burger-btn d-block d-xl-none">
+                    <i class="bi bi-justify fs-3"></i>
+                </a>
+            </header>
+
+            <div class="page-heading">
+                    <div class="page-title">
+                        <div class="row">
+                            <div class="col-12 col-md-6 order-md-1 order-last">
+                                <h3>Gdp</h3>
+                                <p class="text-subtitle text-muted">일인당 국민 소득</p>
+                            </div>
+                            <div class="col-12 col-md-6 order-md-2 order-first">
+                                <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="index">Theme1</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">Gdp
+                                        </li>
+                                    </ol>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    <section class="section">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">데이터 시각화</h4>
+                            </div>
+                            <div class="card-body">
+                            <img src="{% static 'assets/images/samples/gdp2.jpg' %}" class="card-img-top img-fluid"
+                                         alt="singleminded"  >
+                               <h5> <br>
+Gdp는 국내총생산으로써, 이는 일정 기간 동안 한 국가에서 생산된 재화와 용역의 시장 가치를 합한 것을 의미하며 보통 1년을 기준으로 측정한다. 이 변수는 Gdp를 인구수로 나눈 일인당 국민소득을 의미한다. 년도별로 단위가 달라 이하 그래프들은 표준화된 데이터를 기반으로 작성했다.</h5>
+                                {% autoescape off %}
+                                <table class="table" style="table-layout: fixed">
+                                <thead>
+                                                    <tr>
+                                                        <th><i class="bi bi-bar-chart-fill"></i> 연도별 국민총소득 히스토그램</th>
+                                                    </tr>
+                                                </thead>
+                                </table>
+                                {{ plot_div6 }}
+                                <i class="bi bi-chat-dots-fill"></i><h7> 2015년부터 2021년까지의 각각 데이터 Gdp 를 모든 국가에 대한 도수분포를 히스토그램으로 나타낸다. 2015년부터 2021년까지의
+                                Gdp 항목에서 나라별로 0을 기준으로 골고루 퍼져있다.<br></h7>
+                                <br><table class="table" style="table-layout: fixed">
+                                <thead>
+                                                    <tr>
+                                                        <th><i class="bi bi-bar-chart-fill"></i> 연도별 국민총소득 지도</th>
+                                                    </tr>
+                                                </thead>
+                                </table>
+                                {{ plot_div3 }}
+                                <i class="bi bi-chat-dots-fill"></i><h7> Gdp의 정도를 세계 지도로 표현한 그래프이다. 유럽과 북아메리카의 국가들의 Gdp가 상대적으로 높은 것을 확인할 수 있으며, 아프리카 중,남부에 위치한 국가들의 Gdp가 상대적으로 많이 낮은 것을 확인할 수 있다. 특히 2018년의 아랍에미리트의 Gdp가 크게 상승하여 다른 국가들이 상대적으로 연한 색상으로 변화하는 것도 확인할 수 있다.<br></h7>
+                                <br><table class="table" style="table-layout: fixed">
+                                <thead>
+                                                    <tr>
+                                                        <th><i class="bi bi-bar-chart-fill"></i> 11개국 연도별 국민총소득 막대그래프</th>
+                                                    </tr>
+                                                </thead>
+                                </table>
+                                {{ plot_div4 }}
+                                <i class="bi bi-chat-dots-fill"></i><h7> 2021년 행복지수를 바탕으로 한국과 상위 5개국과 하위 5개국으로 11개국의 데이터를 구축했다. 상위 5개의 나라와 한국은 점점 gdp 가 좋아지거나 크게 줄어들지 않지만, 하위 5개의 나라에서는 상위 5개의 나라에 비해 변동성이 큰 것을 확인할 수 있다.<br>※ 하위 5개국 중 Lesotho 자료가 2016년에 없어 다음 하위권 나라인 Malawi를 대신 선택하였다.<br></h7></h7>
+                                <br><table class="table" style="table-layout: fixed">
+                                <thead>
+                                                    <tr>
+                                                        <th><i class="bi bi-bar-chart-fill"></i> 연도,대륙별 국민총소득 vs 행복지수</th>
+                                                    </tr>
+                                                </thead>
+                                </table>
+                                {{ plot_div }}
+                                <i class="bi bi-chat-dots-fill"></i><h7> 년도별로 Gdp에 대한 행복 지수의 상관관계를 scatter plot을 통하여 나타내었다. 국가별 면적을 웹 스크롤링을 통하여 column에 추가하였고, 이를 plot 원소의 크기로 반영하였다. Gdp를 평균을 기준으로 표준화하였기 때문에 년도별로 성장 폭이 적은 유럽과 아메리카 대륙의 국가들은 점점 내려가고 성장 폭이 큰 중동 및 아프리카의 몇몇 국가들은 위로 올라가는 것을 볼 수 있다.<br></h7>
+                                <br><table class="table" style="table-layout: fixed">
+                                <thead>
+                                                    <tr>
+                                                        <th><i class="bi bi-bar-chart-fill"></i> 연도,대륙별 국민총소득 막대그래프</th>
+                                                    </tr>
+                                                </thead>
+                                </table>
+                                {{ plot_div2 }}
+                                <i class="bi bi-chat-dots-fill"></i><h7>
+국가별 gpd의 점수를 대륙 간 비교하기 위해 막대그래프를 그렸다.
+이때 대륙 간 변수들의 점수는 속해있는 국가들의 점수의 평균값을 사용했다. 대체로 큰 변화는 보이지 않지만, 선진국이 많이 분포한 유럽, 오세아니아 대륙은 gdp의 평균이 큰 것을 볼 수 있고 이에 비해 아프리카 대륙은 gdp의 평균이 작은 것을 볼 수 있다.<br>
+</h7><br><table class="table" style="table-layout: fixed">
+                                <thead>
+                                                    <tr>
+                                                        <th><i class="bi bi-bar-chart-fill"></i> 연도,대륙별 국민총소득 박스그래프</th>
+                                                    </tr>
+                                                </thead>
+                                </table>
+                                {{ plot_div5 }}
+                                <i class="bi bi-chat-dots-fill"></i><h7> 연도별 지역별 gdp의 boxplot 이다.
+2019년까지 중동국가를 포함한 아시아의 최댓값이 다른 지역들의 최댓값보다 높았지만
+2020년부터는 유럽의 최댓값이 가장 높았다.
+아프리카의 최솟값이 매년 다른 지역들보다 낮았다.</h7>
+                                {% endautoescape %}
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+            <footer>
+                <div class="footer clearfix mb-0 text-muted">
+                    <div class="float-start">
+                        <p>2021 &copy; Mazer</p>
+                    </div>
+                    <div class="float-end">
+                        <p>Crafted with <span class="text-danger"><i class="bi bi-heart"></i></span> by <a
+                                href="http://ahmadsaugi.com">A. Saugi</a></p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="{% static 'assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+
+    <script src="{% static 'assets/vendors/apexcharts/apexcharts.js' %}"></script>
+    <script src="{% static 'assets/js/pages/dashboard.js' %}"></script>
+
+    <script src="{% static 'assets/js/main.js' %}"></script>
+</body>
+
+</html>
